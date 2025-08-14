@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Header from "./_components/Header";
 
 export const metadata: Metadata = {
   title: "İlk Next.js projesi",
@@ -12,7 +13,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
